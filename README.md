@@ -145,48 +145,65 @@ A manual Java Servlet is implemented to demonstrate understanding of the servlet
 
 
 3. Get Fuel Stats
+
     - Method: GET
+
     - URL: http://localhost:8080/api/cars/1/fuel/stats
 
-🌍 View Data in Browser
+### 🌍 View Data in Browser
 - All Cars:
+
     http://localhost:8080/api/cars
+
 - Fuel Stats for Car 1:
+
     http://localhost:8080/api/cars/1/fuel/stats
 
-💻 CLI Application (car-fuel-cli)
+### 💻 CLI Application (car-fuel-cli)
+
 A standalone Java CLI application that communicates with the backend using:
+
     - java.net.http.HttpClient
     - HTTP requests and JSON responses
-✅ Requirements
+
+## ✅ Requirements
+
     - Java 17+
     - Maven
-▶️ Build the CLI
+
+## ▶️ Build the CLI
+
     cd car-fuel-cli
     mvn clean package
 
 
 This generates a runnable JAR in the target/ directory.
-▶️ Run the CLI
+
+## ▶️ Run the CLI
+
     java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar
 
 
 
-🧪 CLI Commands
-1️⃣ Create Car
+### 🧪 CLI Commands
+
+## 1️⃣ Create Car
+
     java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar create-car --brand Toyota --model Corolla --year 2020
 
 
-2️⃣ Add Fuel Entry
+## 2️⃣ Add Fuel Entry
+
     > java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar add-fuel --carId 1 --liters 40 --price 52.5 --odometer 45000
 
    > java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar add-fuel --carId 1 --liters 20 --price 22.5 --odometer 10000
 
-3️⃣ View Fuel Statistics
+## 3️⃣ View Fuel Statistics
+
     java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar fuel-stats --carId 1
 
 
-✅ Expected Output
+## ✅ Expected Output
 Total fuel: 100 L
 Total cost: 127.50
 Average consumption: 0.0 L/100km
@@ -218,17 +235,20 @@ Average consumption: 0.0 L/100km
   }
 ]
 ---
-🧪 Testing
-✅ Backend Tests
+### 🧪 Testing
+
+## ✅ Backend Tests
+
     cd car-fuel-backend
     mvn test
 
-
 Includes:
-    - Unit tests for fuel statistics calculations
-    - Service-layer validation logic
-✅ CLI Tests
+- Unit tests for fuel statistics calculations
+- Service-layer validation logic
+## ✅ CLI Tests
+
     cd car-fuel-cli
+
     mvn test
 
 
@@ -236,14 +256,14 @@ Includes:
     - JSON parsing tests
     - Output formatting validation
 
-📌 Assumptions & Constraints
+### 📌 Assumptions & Constraints
     - Data is stored in memory only
     - No database or authentication is used
     - Odometer readings must increase
     - At least two fuel entries are required to calculate statistics
     - Invalid car IDs return proper HTTP errors (e.g., 404)
 
-📚 Technologies Used
+### 📚 Technologies Used
     - Java 17
     - Spring Boot
     - Maven
