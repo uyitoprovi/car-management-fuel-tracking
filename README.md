@@ -195,8 +195,7 @@ This generates a runnable JAR in the target/ directory.
 ## 2️⃣ Add Fuel Entry
 
     > java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar add-fuel --carId 1 --liters 40 --price 52.5 --odometer 45000
-
-   > java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar add-fuel --carId 1 --liters 20 --price 22.5 --odometer 10000
+    > java -jar target/shaded/car-fuel-cli-0.0.1-SNAPSHOT-shaded.jar add-fuel --carId 1 --liters 20 --price 22.5 --odometer 10000
 
 ## 3️⃣ View Fuel Statistics
 
@@ -209,31 +208,31 @@ Total cost: 127.50
 Average consumption: 0.0 L/100km
 
 ### Output for Car, fuel entry and fuel stats
-[
-  {
-    "id": 1,
-    "brand": "Toyota",
-    "model": "Corolla",
-    "year": 2020,
-    "fuelEntries": [
-      {
-        "liters": 40,
-        "price": 52.5,
-        "odometer": 45000
-      },
-      {
-        "liters": 40,
-        "price": 52.5,
-        "odometer": 45000
-      },
-      {
-        "liters": 20,
-        "price": 22.5,
-        "odometer": 10000
-      }
+    [
+    {
+        "id": 1,
+        "brand": "Toyota",
+        "model": "Corolla",
+        "year": 2020,
+        "fuelEntries": [
+        {
+            "liters": 40,
+            "price": 52.5,
+            "odometer": 45000
+        },
+        {
+            "liters": 40,
+            "price": 52.5,
+            "odometer": 45000
+        },
+        {
+            "liters": 20,
+            "price": 22.5,
+            "odometer": 10000
+        }
+        ]
+    }
     ]
-  }
-]
 ---
 ### 🧪 Testing
 
