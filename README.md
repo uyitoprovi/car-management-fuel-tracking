@@ -34,12 +34,13 @@ This project is a Java-based Car Management and Fuel Tracking System developed a
 
 > Communicates with the backend using HttpClient
 
-#### 📦 Project Structure
+### 📦 Project Structure
 car-fuel-tracker/
 ├── car-fuel-backend/          # Spring Boot backend
 │   ├── src/main/java/com/codehills/
+
 │   │   ├── model/             # Car, FuelEntry, FuelStats
-│   │   ├── service/           # CarService (shared logic)
+│   │   ├── service/           # CarService
 │   │   ├── controller/        # REST controllers
 │   │   └── servlet/           # Manual FuelStatsServlet
 │   ├── src/main/resources/
@@ -53,13 +54,16 @@ car-fuel-tracker/
 │
 └── README.md
 
-🔧 Backend Server (car-fuel-backend)
+## 🔧 Backend Server (car-fuel-backend)
 
 ✅ Technologies
 
 . Java 17
+
 . Spring Boot
+
 . Maven
+
 . In-memory storage (Lists / Maps)
 
 ✅ Features Implemented
@@ -78,10 +82,14 @@ car-fuel-tracker/
 
 ### 🔌 REST API Endpoints
 Action	Method	Endpoint	Description
-    **	Create car  POST    /api/cars   Register a new car
-    **	List cars   GET /api/cars   Retrieve all cars
-    **	Add fuel    POST    /api/cars/{id}/fuel Add fuel entry
-    **	Fuel stats  GET /api/cars/{id}/fuel/stats   Get fuel statistics
+    >	Create car  POST    /api/cars   Register a new car
+
+    >	List cars   GET /api/cars   Retrieve all cars
+
+    >	Add fuel    POST    /api/cars/{id}/fuel Add fuel entry
+
+    >	Fuel stats  GET /api/cars/{id}/fuel/stats   Get fuel statistics
+
 
 📊 Fuel Statistics Returned
 
@@ -97,10 +105,9 @@ Servlet Details
 
 Endpoint:
 
-> GET /servlet/fuel-stats?carId={id}
+    > GET /servlet/fuel-stats?carId={id}
 
-
-> Extends HttpServlet
+    > Extends HttpServlet
 
 Overrides doGet()
 
@@ -120,6 +127,7 @@ Requirements
 > Maven
 
 > cd car-fuel-backend
+
 > mvn spring-boot:run
 
 
@@ -142,31 +150,36 @@ HTTP requests and JSON responses
  > Maven
 
 ## ▶️ Build the CLI
- > cd car-fuel-cli
- > mvn clean package
+    > cd car-fuel-cli
+
+    > mvn clean package
 
 
 This generates a runnable JAR in the target/ directory.
 
 ## ▶️ Run the CLI
-  java -jar target/car-fuel-cli-1.0-SNAPSHOT-shaded.jar
+
+     java -jar target/car-fuel-cli-1.0-SNAPSHOT-shaded.jar
 
 ### 🧪 CLI Commands
 1️⃣ Create Car
-create-car --brand Toyota --model Corolla --year 2018
+
+    create-car --brand Toyota --model Corolla --year 2018
 
 2️⃣ Add Fuel Entry
-add-fuel --carId 1 --liters 40 --price 52.5 --odometer 45000
+
+    add-fuel --carId 1 --liters 40 --price 52.5 --odometer 45000
 
 3️⃣ View Fuel Statistics
-fuel-stats --carId 1
+    
+    fuel-stats --carId 1
 
 
 ## Expected Output:
 
-Total fuel: 120 L
-Total cost: 155.00
-Average consumption: 6.4 L/100km
+    Total fuel: 120 L
+    Total cost: 155.00
+    Average consumption: 6.4 L/100km
 
 ### 🧪 Testing
  ## Backend Tests
@@ -217,4 +230,4 @@ Output formatting validation
 👨‍💻 Author
 
 Providence Uyitonnyeho
-GitHub:
+GitHub:https://github.com/uyitoprovi
